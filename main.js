@@ -3,6 +3,7 @@ import { loop } from "./for-loop.js";
 let input = 'turpentine and turtles';
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 let resultArray = [];
+let test = 'nothing';
 for (let i = 0; i < input.length; i++) {
     if (input[i] === 'e') {
         resultArray.push(input[i]);
