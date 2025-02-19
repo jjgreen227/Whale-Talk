@@ -1,38 +1,24 @@
 import { loop } from "./for-loop.js";
+import { pokemons } from "./for-loop.js";
 
-let input = 'turpentine and turtles';
-const vowels = ['a', 'e', 'i', 'o', 'u'];
-let resultArray = [];
-let test = 'nothing';
-for (let i = 0; i < input.length; i++) {
-    if (input[i] === 'e') {
-        resultArray.push(input[i]);
-    }
-    if (input[i] === 'u') {
-        resultArray.push(input[i]);
-    }
-    for (let j = 0; j < vowels.length; j++) {
-        if (input[i] === vowels[j]) {
-            resultArray.push(vowels[j]);
+const convertToWhale = phrase => {
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let newArray = [];
+    for (let i = 0; i < phrase.length; i++) {
+        for (let j = 0; j < vowels.length; j++) {
+            // If the phrase has any vowels...Add it to a new array.
+            // Compare the phrase index to the vowels
+            if (phrase[i] === vowels[j]) {
+                // Put and double the vowels into new array.
+                newArray.push(phrase[i]);
+                newArray.push(vowels[j]);
+            }
         }
     }
-}
+    console.log(newArray.join('').toUpperCase());
+} 
+let string = 'Normal Classes and Turtles be Turtling';
 
-loop();
-
-// console.log(resultArray);
-let resultString = resultArray.join('').toUpperCase();
-// console.log(resultString);
-
-const testVowels = ['a', 'e', 'i', 'o', 'u'];
-const newArray = [];
-
-const convertToWhaleTalk = testInput => {
-    testInput.array.forEach(test => {
-        console.log(test);
-    })
-}
-
-let subject = ['Test'];
-
-// convertToWhaleTalk(subject);
+convertToWhale(string);
+convertToWhale(pokemons.toString());
+// loop();

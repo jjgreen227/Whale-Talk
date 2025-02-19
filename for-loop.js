@@ -1,6 +1,4 @@
-
-
-const pokemons = ["Charmander", "Pikachu", "Garchomp", "Darkrai"];
+export const pokemons = ["Charmander", "Pikachu", "Garchomp", "Darkrai"];
 
 export function loop() {
     for (let i = 0; i < pokemons.length; i++) {
@@ -10,5 +8,3 @@ export function loop() {
         console.log(`I have caught ${pokemon}!`);
     }
 }
-
-loop();
