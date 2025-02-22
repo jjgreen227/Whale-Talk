@@ -15,10 +15,13 @@ const convertToWhale = phrase => {
             }
         }
     }
+    console.log(phrase);
     console.log(newArray.join('').toUpperCase());
 } 
-let string = 'Normal Classes and Turtles be Turtling';
 
-convertToWhale(string);
+convertToWhale('Turtles be Turtling');
+
+/* ./for-loop.js */
+
 convertToWhale(pokemons.toString());
-// loop();
+loop();
